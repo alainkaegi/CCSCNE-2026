@@ -1,0 +1,88 @@
+Workshop Exercise #1
+====================
+
+1. In your terminal window, make sure you are in the Activity1 directory.
+   You will probably have to execute the following command.
+
+    cd Activity1
+
+2. Look at the contents of the file idents.plcc to familiarize yourself with which
+   strings would be accepted as tokens.
+
+3. Run
+
+    plccmk -c idents.plcc
+
+It creates a set of Java programs in a directory named Java that implements
+a scanner that follows the lexical specification in 'idents.plcc'.
+(The -c option ensures that any residue from previous builds is cleared
+before building a new one starts.)
+
+
+4. Test your implementation with the following command:
+
+    scan
+
+giving input from the keyboard and observing the token output produced.
+(Type Control-D on a new line to indicate your input is finished.)
+
+5. Test your implementation with the given test input using
+   the following command:
+
+    scan < testprog.txt
+
+Again, observe the token output produced.
+
+Be sure your implementation properly skips whitespace and comments,
+properly recognizes IDENT tokens as given in the specification, and
+properly returns an ERROR token for anything else.
+
+How Tokens are Scanned
+----------------------
+
+(There is a more complete explanation in scanner-algo.txt.)
+
+The "skip" and "token" specification rules are processed in the
+order that they appear in the grammar file. They both attempt to
+match characters found at the beginning of the remaining input.
+
+If a skip rule matches before any token rule has matched, the skip
+rule wins and the matched characters are thrown away.
+
+If multiple token rules match the current beginning of the input,
+the longest match will be the one that counts. If there is more
+than one longest match, the earliest one will be the one that counts.
+
+NOTE: When entering input from the keyboard, type ctrl-D to insert
+an EOF character.
+
+
+PLCC Scanner files (in the Java directory)
+------------------------------------------
+
+Scan.java             -- defines methods that read character stream
+                         input and produce Token stream output; its
+                         main method uses System.in for character
+                         stream input and System.out for token stream
+                         output.
+Token.java            -- defines the Token class; its main method
+                         displays the token information extracted
+                         from the lexical specification.
+
+
+6. Edit idents.plcc to accomplish the following.
+  a. Add a new token INTEGER that matches unsigned decimal integers.
+  b. Add tokens IF and ELSE for the reserved words "if" and "else"
+     respectively.
+
+7. Rebuild your scanner by once again executing
+
+    plccmk -c idents.plcc
+
+Use the `scan' program to test your work. You may use keyboard input
+or the provided test file testprog.txt (as shown in the square brackets).
+
+scan [ < testprog.txt ]
+
+Remember that you must re-run plccmk every time you modify your grammar file
+(in this case idents.plcc) in order to be able to test your work.

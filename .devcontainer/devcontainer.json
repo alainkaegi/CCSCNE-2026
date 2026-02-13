@@ -1,0 +1,22 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "tasks": {
+                    "version": "2.0.0",
+                    "tasks": [
+                        {
+                            "label": "PLCC",
+                            "type": "shell",
+                            "command": ".devcontainer/install-plcc.bash",
+                            "runOptions": {
+                                "runOn": "folderOpen"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
