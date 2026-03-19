@@ -86,7 +86,7 @@ Add
 Sub
 %%{
     public int evaluate() {
-        return opnd1.evaluate() + opnd2.evaluate();
+        return opnd1.evaluate() - opnd2.evaluate();
     }
 %%}
 
