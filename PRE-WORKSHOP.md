@@ -21,9 +21,9 @@ and chat with us in our help channel.
 
 2. Sign in to [GitHub](github.com).
 
-3. Fork our CCSCNE 2025 workshop repository by...
+3. Fork our CCSCNE 2026 workshop repository by...
 
-    - Navigating to <https://github.com/ourPLCC/CCSCNE-2025> and
+    - Navigating to <https://github.com/ourPLCC/CCSCNE-2026> and
     - Selecting `Fork` and then `Create fork`.
 
 4. Create and start a codespace for your fork
