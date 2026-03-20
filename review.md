@@ -126,7 +126,7 @@ The three thought-provoking discussion questions appear after "This is the last 
 ### instructional-design-review.txt
 
 **`**=` semantics description (line 89)**
-The review describes `**=` as meaning "one or more of `<stmt>`". This should be verified against the PLCC documentation — if `**=` means "zero or more", the description is incorrect and could mislead readers.
+The review incorrectly describes `**=` as meaning "one or more of `<stmt>`". It means **zero or more**. The description should be corrected to avoid misleading readers.
 
 ---
 
@@ -145,4 +145,4 @@ The review describes `**=` as meaning "one or more of `<stmt>`". This should be 
 | `Activity1/assignment.txt` | 16–18 | Step 3 explanatory paragraph visually detached | Clarity |
 | `README.md` | 18, 23 | "Pres" unexpanded | Clarity (minor) |
 | `Activity1/scanner-algo.txt` | 53–55 | Slightly awkward phrasing | Style |
-| `instructional-design-review.txt` | 89 | `**=` described as "one or more" — verify against PLCC docs | Verify |
+| `instructional-design-review.txt` | 89 | `**=` described as "one or more" — it means "zero or more" | Correctness |
