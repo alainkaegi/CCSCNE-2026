@@ -86,7 +86,7 @@ Activity4 has no assignment.txt.
 
 The **= repeating rule syntax is introduced without explanation.
   It appears in Activity2's grammar (<stmts> **= <stmt>) and Activity4, but
-  its meaning ("one or more of <stmt>") isn't explained in the assignments.
+  its meaning ("zero or more of <stmt>") isn't explained in the assignments.
   Students who wonder about the syntax have to find the Tutorial PDF.
 
 Activity3's reflection questions may get skipped.

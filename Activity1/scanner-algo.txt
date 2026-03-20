@@ -51,8 +51,7 @@ Once all of the token specifications have been examined:
     Otherwise an end-of-file "token" is added to the output token
     stream.
 
-    The scanner does not actually emit the EOF token in a way that
-    the parser can detect it.
+    The scanner does not emit the EOF token in a form the parser can detect.
 
 When entering input from the keyboard, type ctrl-D to insert an EOF
 character.

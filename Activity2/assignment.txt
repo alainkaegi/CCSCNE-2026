@@ -24,7 +24,7 @@ will eliminate the ambiguity by requiring that all if statements end with
 the (new) "endif" keyword.
 
 (Note that the use of IF...ENDIF sets up a bracketing similar to what
-parantheses do. It means that the nesting depth of the if statements
+parentheses do. It means that the nesting depth of the if statements
 can be determined unambiguously.)
 
 Run
@@ -46,7 +46,7 @@ To debug and trace the parse's progress, use the '-t' (for "trace") flag:
 
     parse -t < testprog.txt
 
-Notice how the the parse trace starts with the *start symbol* --
+Notice how the parse trace starts with the *start symbol* --
 the first nonterminal on the LHS of the first grammar rule in the BNF
 specification -- and recursively indents (and parses) the RHS items that
 appear in each grammar rule.

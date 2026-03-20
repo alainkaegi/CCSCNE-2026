@@ -160,13 +160,6 @@ This would cause all subtraction expressions to silently return wrong results (e
 | `Activity3/assignment.txt` line 24 | "evalutes" → "evaluates" |
 | `Activity3/assignment.txt` line 48 | "analyis" → "analysis" |
 
-### Year / Reference Mismatches
-
-| Location | Issue |
-|---|---|
-| `README.md` line 1 | Title says "CCSCNE 2025" — should be 2026 |
-| `PRE-WORKSHOP.md` lines 24/26 | References `CCSCNE-2025` repo URL — should be 2026 |
-
 ### Numbering Error
 
 | Location | Issue |

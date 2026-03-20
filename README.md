@@ -15,19 +15,19 @@ not able to, no worries, we'll have you team up with someone who has.
     * 10m Team Up and Setup
 
 * 35m Lexical Analysis
-    * 10m Pres
+    * 10m Presentation
     * 20m Exercise
     * 5m Solution
 
 * 35m Syntactic Analysis
-    * 10m Pres
+    * 10m Presentation
     * 20m Exercise
     * 5m Solution
 
 * 10m Break
 
 * 30m Semantic Analysis
-    * 5m Pres
+    * 5m Presentation
     * 20m Exercise
     * 5m Solution
 
