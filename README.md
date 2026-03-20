@@ -1,4 +1,4 @@
-# PLCC Workshop - CCSCNE 2025
+# PLCC Workshop - CCSCNE 2026
 
 ## Pre-Workshop Setup
 
