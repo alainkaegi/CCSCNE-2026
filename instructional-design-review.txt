@@ -1,0 +1,110 @@
+Instructional Design Review — CCSCNE 2026 PLCC Workshop
+=========================================================
+Perspective: educator reviewing materials as a student would experience them.
+
+
+SOLUTIONS IMPLEMENTED
+---------------------
+
+Activity1 — Lexical Analysis
+  Added to idents.plcc before the IDENT token (order matters — keywords must
+  be checked first):
+
+    token INTEGER '\d+'
+    token IF 'if'
+    token ELSE 'else'
+
+  Matches the reference solution. Scanner correctly classifies tokens including
+  reserved words and integers distinct from identifiers.
+
+Activity2 — Syntactic Analysis
+  Added `token ENDIF 'endif'` and appended ENDIF to the IfStmt rule:
+
+    <stmt>IfStmt ::= IF <expr> THEN <stmt> <elsePart> ENDIF
+
+  Brackets the if-statement, eliminating the dangling-else ambiguity. Parser
+  accepts the test program cleanly.
+
+Activity3 — Semantic Analysis
+  - Added `token UMIOP '_'`
+  - Added grammar rule `<expr>Umi ::= UMIOP <expr>opnd1`
+  - Changed dummy evaluate() in Expr to `public abstract int evaluate();`
+  - Added Sub, Mul, Div, Umi classes with overriding evaluate() methods
+
+  All test expressions evaluate correctly (e.g. `* / 45 5 - 3 10` -> -63,
+  `_ * + 12 6 5` -> -90).
+
+
+WHAT WORKS WELL
+---------------
+
+Progression is well-designed.
+  The activities build incrementally: tokens -> grammar -> semantics. Each
+  concept is introduced with just enough context before students touch code.
+
+Concrete, testable feedback loops.
+  `scan`, `parse`, and `rep` give instant feedback. Students see their changes
+  matter immediately, which is motivating.
+
+Activity3's code comments are excellent.
+  The inline comments in prefix.plcc explaining what fields a class gets, why
+  @Override matters, and what the dummy evaluate() is for are genuinely helpful
+  scaffolding.
+
+scanner-algo.txt is a gem.
+  It explains "first longest match" precisely. The implication that keyword
+  tokens (IF, ELSE) must appear before IDENT is a real gotcha, and the
+  algorithm document makes it discoverable rather than just mysterious.
+
+
+FRICTION POINTS FOR STUDENTS
+-----------------------------
+
+Activity1 assignment doesn't explain the keyword ordering rule.
+  It says "add IF and ELSE tokens" but doesn't warn that order matters — that
+  IF/ELSE must appear before IDENT or they'll be scanned as identifiers. The
+  scanner-algo.txt covers this, but the assignment references it only as an
+  aside. A single sentence would prevent significant confusion:
+    "Hint: reserved words must appear before the general IDENT rule."
+
+Activity2 asks students to "find the conflict" in 2nd-try without guidance.
+  The 1st-try conflict (two rules both starting with IF) is obvious, but the
+  2nd-try conflict is the classic dangling-else, which many students won't
+  recognize without a hint about what to look for. A brief pointer — "what
+  happens when the parser sees ELSE: which rule handles it?" — would help.
+
+The % section separator is never introduced in the assignments.
+  Students see % in the .plcc files but it's not explained in any assignment,
+  only in Tutorial.pdf. A one-line comment in the starter files would help:
+    "# The three sections (lexical / syntactic / semantic) are separated by %"
+
+Activity4 has no assignment.txt.
+  It's apparently a demo/extension, but students who finish early and explore
+  it have no guidance. A short README or comment block explaining its purpose
+  and how to build/run it would make it a valuable extension rather than a
+  mystery.
+
+The **= repeating rule syntax is introduced without explanation.
+  It appears in Activity2's grammar (<stmts> **= <stmt>) and Activity4, but
+  its meaning ("one or more of <stmt>") isn't explained in the assignments.
+  Students who wonder about the syntax have to find the Tutorial PDF.
+
+Activity3's reflection questions may get skipped.
+  The three thought-provoking questions at the bottom of assignment.txt appear
+  after "this is the last exercise, stop your workspace." Reordering so the
+  questions come before the stop instruction would encourage engagement.
+
+
+MINOR ISSUES
+------------
+
+- The @Override annotation appears in the Activity3 starter's Add class but
+  the reference solution drops it. Either is valid Java, but keeping @Override
+  consistently is better practice and worth standardizing.
+
+- Sol/ only contains solutions for Activities 1-3, which is appropriate since
+  Activity4 is provided as a complete working example.
+
+- Activity2/testprog.txt already contains endif-terminated programs, so
+  students testing the solution file against their fixed grammar will work
+  correctly without any file changes needed.
