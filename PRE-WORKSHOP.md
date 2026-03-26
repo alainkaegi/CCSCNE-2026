@@ -17,9 +17,9 @@ and chat with us in our help channel.
 
 ## Pre-Workshop Instructions
 
-1. Sign up for a [GitHub](github.com) account. You may use an existing account.
+1. Sign up for a [GitHub](https://github.com) account. You may use an existing account.
 
-2. Sign in to [GitHub](github.com).
+2. Sign in to [GitHub](https://github.com).
 
 3. Fork our CCSCNE 2026 workshop repository by...
 
@@ -32,7 +32,7 @@ and chat with us in our help channel.
 5. Wait for GitHub to build your codespace. It may take several minutes.
    Next time you can reuse the codespace, and so connecting to it will be much faster.
 
-5. Test the codespace by trying each of the following commands in the codespace's terminal.
+6. Test the codespace by trying each of the following commands in the codespace's terminal.
    For each you should see a version number and no errors.
 
     ```
@@ -41,7 +41,7 @@ and chat with us in our help channel.
     plcc --version
     ```
 
-6. Stop the codespace by clicking `>< Codespaces:` in the lower left and then selecting `Stop Current Codespace`.
+7. Stop the codespace by clicking `>< Codespaces:` in the lower left and then selecting `Stop Current Codespace`.
    You may safely close the tab.
 
 Stopping your codespace is important to save your monthly, free compute credits from GitHub.

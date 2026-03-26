@@ -21,7 +21,7 @@ Observe, for example, that the prefix expression
 
     - 5 3
 
-evalutes to 2, not -2, so order is important.
+evaluates to 2, not -2, so order is important.
 
 Test your solution to this step as follows:
 
@@ -45,7 +45,7 @@ Notes
 
 This exercise illustrates (A) how the parse tree node classes have
 available to them their child nodes (as fields in the LHS class)
-for semantic analyis, and (B) how subclass names are used in PLCC to
+for semantic analysis, and (B) how subclass names are used in PLCC to
 distinguish among multiple BNF rules having the same LHS nonterminal.
 
 Question: Without making any other changes to your language specification
